@@ -6,214 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".ui.HomePage">
 
-    <TextView
-        android:id="@+id/tvmyBill"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="193dp"
-        android:layout_marginBottom="674dp"
-        android:text="My bill Activities"
-        android:textColorLink="#673AB7"
-        android:textSize="16sp"
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/bnvHome"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/tvyearly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginBottom="618dp"
-        android:text="Weekly"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvmonthly"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvmonthly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginBottom="618dp"
-        android:text="Monthly"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvweekly"
-        app:layout_constraintStart_toEndOf="@+id/tvyearly"
-        app:layout_constraintTop_toBottomOf="@+id/tvmyBill"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/tvweekly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="91dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="621dp"
-        android:text="Yearly"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/Fcv"
+        android:name="com.example.billsmanagement.ui.SummaryFragments"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bnvHome"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvmonthly"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/ivRent"
-        android:layout_width="91dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginBottom="516dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/rent" />
-
-    <ImageView
-        android:id="@+id/ivShopping"
-        android:layout_width="90dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginBottom="115dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivRent"
-        app:layout_constraintVertical_bias="0.003"
-        app:srcCompat="@drawable/shopping" />
-
-    <ImageView
-        android:id="@+id/ivElectricity"
-        android:layout_width="94dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="26dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivShopping"
-        app:layout_constraintVertical_bias="0.026"
-        app:srcCompat="@drawable/electricuty" />
-
-    <ImageView
-        android:id="@+id/ivRecreational"
-        android:layout_width="96dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="180dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.003"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/airplane" />
-
-    <TextView
-        android:id="@+id/tvRent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="173dp"
-        android:layout_marginBottom="544dp"
-        android:text="Rent"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/ivRent"
-        app:layout_constraintTop_toBottomOf="@+id/tvmonthly"
-        app:layout_constraintVertical_bias="0.375" />
-
-    <TextView
-        android:id="@+id/tvShopping"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="86dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginBottom="426dp"
-        android:text="Shopping spree"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/ivShopping"
-        app:layout_constraintTop_toBottomOf="@+id/tvRent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/tvElectricity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="79dp"
-        android:layout_marginEnd="174dp"
-        android:layout_marginBottom="328dp"
-        android:text="Electricity"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/ivElectricity"
-        app:layout_constraintTop_toBottomOf="@+id/tvShopping"
-        app:layout_constraintVertical_bias="0.666" />
-
-    <TextView
-        android:id="@+id/tvRecreation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="91dp"
-        android:layout_marginEnd="169dp"
-        android:layout_marginBottom="214dp"
-        android:text="Recreation Activities"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.19"
-        app:layout_constraintStart_toEndOf="@+id/ivRecreational"
-        app:layout_constraintTop_toBottomOf="@+id/tvElectricity"
-        app:layout_constraintVertical_bias="0.375" />
-
-    <ImageView
-        android:id="@+id/ivCarService"
-        android:layout_width="94dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="9dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivRecreational"
-        app:layout_constraintVertical_bias="0.352"
-        app:srcCompat="@drawable/carservice" />
-
-    <TextView
-        android:id="@+id/ivService"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="106dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginBottom="76dp"
-        android:text="Car Service"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/ivCarService"
-        app:layout_constraintTop_toBottomOf="@+id/tvRecreation"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:layout="@layout/fragment_summary_fragments" />
 </androidx.constraintlayout.widget.ConstraintLayout>
